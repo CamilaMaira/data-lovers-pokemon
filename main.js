@@ -120,9 +120,6 @@ selectOrder.addEventListener("change", () => {
   });
 });
 
-
-
-
 /*estos corresponde a fetch, van al final*/
 })
 }
