@@ -57,7 +57,6 @@ selectType.addEventListener("change", () => {
     <img src="${showType.img}" width="100px" height:"100px" class:"img-fluid" alt="imgPokemon">
         <h3>${showType.name}</h3>
         <p>${showType.num}</p>
-        <p>${showType.type}</p>
      </div>`
   });
 });
