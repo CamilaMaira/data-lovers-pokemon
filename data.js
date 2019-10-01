@@ -22,11 +22,12 @@ candy: (data, conditionCandy) => {
         return CandyFilter;
     },
 
-num: (data, conditionNumber) => {
-    const NumFilter = data.filter (pokemonNumber => {
-        return pokemonNumber.num == conditionNumber; 
+num: (data, number) => {
+    const NumFilter = data.filter(pokemonNumber => {
+        return pokemonNumber.num.includes(number); 
     })
     return NumFilter; 
+    
     },
 
 weakness: (data, conditionWeakness) => {

@@ -96,7 +96,6 @@ selectWeakness.addEventListener("change", () => {
         <img src="${showWeakness.img}" width="100px" height:"100px" class:"img-fluid" alt="imgPokemon">
         <h3>${showWeakness.name}</h3>
         <p>${showWeakness.num}</p>
-        <p>${showWeakness.weaknesses}</p>
      </div>`
   });
 });
@@ -120,11 +119,34 @@ selectOrder.addEventListener("change", () => {
   });
 });
 
+
+/* filtrado x numero, ingresado x el usuario */
+
+const btnSearch = document.getElementById("search");
+btnSearch.addEventListener("click", () => {
+
+  let text = document.getElementById("number").value;
+  let numberFilter = window.filter.num(data, text);
+
+  document.getElementById("showPokemon").innerHTML="";
+  numberFilter.forEach((showNumber) => {
+    container.innerHTML += 
+    `<div class="cards">
+        <img src="${showNumber.img}" width="100px" height:"100px" class:"img-fluid" alt="imgPokemon">
+        <h3>${showNumber.name}</h3>
+        <p>${showNumber.num}</p>
+     </div>`
+
+
+
+})
+})
+
+
+
 /*estos corresponde a fetch, van al final*/
 })
 }
-
-
 
 
 
